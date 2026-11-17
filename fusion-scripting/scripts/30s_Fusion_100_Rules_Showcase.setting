@@ -1,0 +1,35 @@
+{
+	Tools = ordered() {
+		Merge_Scene4 = Merge {
+			CtrlWZoom = false,
+			Inputs = {
+				Blend = Input {
+					SourceOp = "Merge_Scene4Blend",
+					Source = "Value",
+				},
+				Background = Input {
+					SourceOp = "Merge_Scene3",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "S4_Transform",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 1815, 181.5 } },
+		},
+		Merge_Scene4Blend = BezierSpline {
+			SplineColor = { Red = 205, Green = 205, Blue = 205 },
+			CtrlWZoom = false,
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 0, RH = { 180, 0 }, Flags = { Linear = true } },
+				[540] = { 0, LH = { 360, 0 }, RH = { 544.666666666667, 0.333333333333333 }, Flags = { Linear = true } },
+				[554] = { 1, LH = { 549.333333333333, 0.666666666666667 }, RH = { 604.666666666667, 1 }, Flags = { Linear = true } },
+				[706] = { 1, LH = { 655.333333333333, 1 }, RH = { 710.666666666667, 0.666666666666667 }, Flags = { Linear = true } },
+				[720] = { 0, LH = { 715.333333333333, 0.333333333333333 }, Flags = { Linear = true } }
+			}
+		}
+	}
+}
