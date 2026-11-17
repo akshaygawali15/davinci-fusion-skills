@@ -101,8 +101,9 @@ This reference documents the exact registry IDs, primary inputs, outputs, and ke
   - `CharacterSpacingHorizontal` (Float): Tracking / kerning offset.
   - `Red1`, `Green1`, `Blue1`, `Alpha1` (Float): Element 1 (Fill) color.
   - `Softness1` (`{X, Y}`): Text edge softness blur.
-  - `VerticalTopCenterBottom` (Integer): `0` = Top, `1` = Center, `2` = Bottom alignment.
-  - `HorizontalLeftCenterRight` (Integer): `0` = Left, `1` = Center, `2` = Right, `3` = Justify.
+  - `VerticalTopCenterBottom` (Float): `-1.0` = Bottom, `0.0` = Center, `1.0` = Top.
+  - `HorizontalLeftCenterRight` (Float): `-1.0` = Left, `0.0` = Center, `1.0` = Right.
+  - `HorizontalJustificationNew` (Float): `0.0` = Left, `1.0` = Center, `2.0` = Right, `3.0` = Justify.
 
 ### `Transform` (`Transform`)
 - **Inputs**:

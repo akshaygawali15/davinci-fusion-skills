@@ -216,10 +216,10 @@ def build_text_lower_third(comp, title: str = "Title Here", subtitle: str = "Sub
     title_text.SetAttrs({"TOOLS_Name": "Title_Text"})
     title_text.StyledText = title
     title_text.Font = "Open Sans"
-    title_text.Style = "Bold"
     title_text.Size = 0.045
     title_text.Center = [0.25, 0.23]
-    title_text.HorizontalLeftCenterRight = 1  # Center
+    title_text.HorizontalLeftCenterRight = 0.0  # Center
+    title_text.HorizontalJustificationNew = 1.0
 
     # 3. Subtitle Text+
     sub_text = comp.AddTool("TextPlus", True, 0.0, 1.5)
@@ -232,7 +232,8 @@ def build_text_lower_third(comp, title: str = "Title Here", subtitle: str = "Sub
     sub_text.Red1 = 0.75
     sub_text.Green1 = 0.75
     sub_text.Blue1 = 0.8
-    sub_text.HorizontalLeftCenterRight = 1
+    sub_text.HorizontalLeftCenterRight = 0.0  # Center
+    sub_text.HorizontalJustificationNew = 1.0
 
     # 4. Merge text elements
     merge_texts = comp.AddTool("Merge", True, 1.5, 1.0)
